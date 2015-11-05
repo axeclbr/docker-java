@@ -1,5 +1,7 @@
 FROM axeclbr/debian
 
+MAINTAINER axeclbr <axeclbr@posteo.de>
+
 ENV DEBIAN_FRONTEND noninteractive
 ENV JDK_MAJOR_VERSION="8"
 ENV JDK_MINOR_VERSION="66"
