@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y \
  && rm jdk-${JDK_VERSION}-linux-x64.tar.gz \
  && ln -s /opt/${JDK_DIR}/bin/java /usr/local/bin/java \
  && ln -s /opt/${JDK_DIR}/bin/javac /usr/local/bin/javac \
+ && apt-get remove -y wget \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
