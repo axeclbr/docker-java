@@ -23,6 +23,7 @@ RUN \
    tar xvzf jdk-${JDK_VERSION}-linux-x64.tar.gz && \
    rm jdk-${JDK_VERSION}-linux-x64.tar.gz && \
    ln -s /opt/${JDK_DIR}/jre/bin/java /usr/local/bin/java && \
+   ln -s /opt/${JDK_DIR}/jre/bin/javac /usr/local/bin/javac && \
    rm -rf /var/lib/apt/lists/*;
 
 ENV JAVA_HOME /opt/${JDK_DIR}
