@@ -1,1 +1,1 @@
-jdk8/Dockerfile
+jre8/Dockerfile
