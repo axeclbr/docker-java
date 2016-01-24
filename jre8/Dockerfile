@@ -2,7 +2,6 @@ FROM alpine:3.3
 
 MAINTAINER axeclbr <axeclbr@posteo.de>
 
-# Install Java.
 RUN export \
     JAVA_MAJOR_VERSION="8" \
     JAVA_MINOR_VERSION="72" \
@@ -18,8 +17,8 @@ RUN export \
  && if [ $(sha512sum /tmp/glibc.apk | awk {'print $1'}) != $GLIBC_CHECKSUM ]; then echo "CHECKSUM CHECK FAILED: glibc"; exit 1; fi \
  && apk add --allow-untrusted /tmp/glibc.apk \
  && curl --cookie "oraclelicense=accept-securebackup-cookie" -L \
-         http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}-${JAVA_BUILD}/server-jre-${JAVA_VERSION}-linux-x64.tar.gz \
-         -o /opt/jre.tgz \
+    http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}-${JAVA_BUILD}/server-jre-${JAVA_VERSION}-linux-x64.tar.gz \
+    -o /opt/jre.tgz \
  && cd /opt \
  && tar xvzf jre.tgz \
  && mv /opt/${JAVA_DIR}/jre /opt/jre \
