@@ -8,3 +8,4 @@ Java on Alpinelinux in Docker. (JDKs still on Debian - will be moved to Alpineli
 Start Container and check Java version with
 
     docker run --rm -it axeclbr/java
+

@@ -4,8 +4,8 @@ MAINTAINER axeclbr <axeclbr@posteo.de>
 
 RUN export \
     JAVA_MAJOR_VERSION="8" \
-    JAVA_MINOR_VERSION="72" \
-    JAVA_BUILD="b15" \
+    JAVA_MINOR_VERSION="102" \
+    JAVA_BUILD="b14" \
  && export \
     JAVA_VERSION="${JAVA_MAJOR_VERSION}u${JAVA_MINOR_VERSION}" \
     JAVA_DIR="jdk1.${JAVA_MAJOR_VERSION}.0_${JAVA_MINOR_VERSION}" \
@@ -34,3 +34,4 @@ ENV JAVA_HOME /opt/jre
 ENV PATH $PATH:${JAVA_HOME}/bin
 
 CMD ["/opt/jre/bin/java", "-version"]
+
