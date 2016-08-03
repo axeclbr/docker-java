@@ -9,8 +9,8 @@ RUN export \
  && export \
     JAVA_VERSION="${JAVA_MAJOR_VERSION}u${JAVA_MINOR_VERSION}" \
     JAVA_DIR="jdk1.${JAVA_MAJOR_VERSION}.0_${JAVA_MINOR_VERSION}" \
-    GLIBC_APK_URL="https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64/glibc-2.21-r2.apk" \
-    GLIBC_CHECKSUM="5fc82dc13b89ffea09cf187d5764299fc3a9ba43d75499f8b21fb975a2f4074ccfbf8c1c586316b84c6a8e476d0fce5df04d1546bf4094c531739e7a1f620d74" \
+    GLIBC_APK_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.23-r3/glibc-2.23-r3.apk" \
+    GLIBC_CHECKSUM="f9aa7e0bdc71fb560f99d6f447c73b5796a0ccf084e625feddbdc235e32ca722504f2e72be89fed954f6bfda3e10ed107952ae1bd5b6e1b2c6993479ff286a20" \
  && apk --update add curl \
  && mkdir /opt \
  && curl -L $GLIBC_APK_URL -o /tmp/glibc.apk \
@@ -34,4 +34,3 @@ ENV JAVA_HOME /opt/jre
 ENV PATH $PATH:${JAVA_HOME}/bin
 
 CMD ["/opt/jre/bin/java", "-version"]
-
